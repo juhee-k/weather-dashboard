@@ -1,0 +1,161 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/84f732b584.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js" integrity="sha512-rmZcZsyhe0/MAjquhTgiUcb4d9knaFc7b5xAfju483gbEXTkeJRUMIPk6s3ySZMYUHEcjKbjLjyddGWMrNEvZg==" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    
+    <title>Weather Dashboard</title>
+    
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+
+    <header class="container-fluid text-center text-white bg-dark p-2">
+        <h1>Weather Dashboard</h1>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <aside class="col-lg-3 bg-light">
+                
+                <h5 class="mt-1">Search for City</h5>
+                <div class="form-inline form-group">
+                    <input class="form-control" type="text" id="search-value" />
+                    <button class="btn btn-primary" id="search-button"> <i class="fa fa-search"></i> </button>
+                </div>
+
+                <ul class="list-group-history" id="history" ></ul>
+
+            </aside>
+
+            <div class="col-lg-9">
+                <div id="today" class="mt-3"></div>
+                <div id="forecast" class="mt-3"></div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>Weather Dashboard</title>
+    
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body>
+    
+    <header class="container-fluid text-center text-white bg-dark p-2">
+        <h1>Weather Dashboard</h1>
+    </header>
+  
+    <div class="jumbotron jumbotron-fluid col-12">
+
+        <div class="container-fluid">
+            <div class="row">
+                <aside class="col-lg-3 bg-light" id="cityCon">
+                    
+                    <h5 class="mt-1">Search for City</h5>
+
+                    <div class="form-inline form-group">
+                        <input class="form-control" type="text" id="searchCity" />
+                        <button class="btn btn-primary" id="btn-searchCity"> <i class="fa fa-search"></i> </button>
+                    </div>
+    
+                    <button class="btn-clear"><i class="fa fa-eraser"></i> Clear</button>
+                    
+                    <ul class="list-group list-group-flush" id="searchedList"></ul>
+    
+                </aside>
+            </div>
+
+            <div class="col-lg-9">
+                <div id="today" class="mt-3">
+
+                </div>
+                <div id="ul-5days" class="mt-3">
+                    <h2 class="col-12">Forecast 5 days</h2>
+
+                </div>
+            </div>
+
+        </div>   
+        
+    </div>
+  
+      <!-- <div class="figureCon">
+        <figure class="figure animated flipInX" id="figureCity">
+        </figure>
+      </div>
+  
+      <ul class="ulCon col-12" id="ul-5days">
+       
+        <li id="day-1">
+          <h5 class="displayDate"></h5>
+          <img id="iconDaily">
+          <p id="tempDaily"></p>
+          <p id="humid-5days"></p>
+        </li>
+        <li id="day-2">
+          <h5 class="displayDate"></h5>
+          <img id="iconDaily">
+          <p id="tempDaily"></p>
+          <p id="humid-5days"></p>
+        </li>
+        <li id="day-3">
+          <h5 class="displayDate"></h5>
+          <img id="iconDaily">
+          <p id="tempDaily"></p>
+          <p id="humid-5days"></p>
+        </li>
+        <li id="day-4">
+          <h5 class="displayDate"></h5>
+          <img id="iconDaily">
+          <p id="tempDaily"></p>
+          <p id="humid-5days"></p>
+        </li>
+        <li id="day-5">
+          <h5 class="displayDate"></h5>
+          <img id="iconDaily">
+          <p id="tempDaily"></p>
+          <p id="humid-5days"></p>
+        </li>
+      </ul>
+  
+    </div> -->
+  
+    <footer class="py-4 bg-dark text-white-50">
+      <div class="text-center">
+        <large>
+          Copyright &copy; 2019 Michael Eunsoo Jung. All rights reserved.
+        </large>
+      </div>
+    </footer>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/84f732b584.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+    <script src="script.js"></script>
+
+  
+  </body>
+</html>

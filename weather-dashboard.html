@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>Weather Dashboard</title>
+    
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body>
+    
+    <header class="container-fluid text-center text-white bg-dark p-2">
+        <h1>Weather Dashboard</h1>
+    </header>
+
+  <div class="jumbotron col-12">
+      <div class="row">
+          <div class="col-4">
+            
+            <h5 class="mt-1">Search for City</h5>
+            <div class="form-inline form-group">
+                  <input id="searchCity" type="text" placeholder="City Name" name="search">
+                  <button id="btn-searchCity" type="submit">
+                    <i class="fa fa-search"></i>
+                  </button>
+            </div>
+          
+                <ul class="list-group list-group-flush" id="searchedList"></ul>
+                <button class="btn-clear"><i class="fa fa-eraser"></i> Clear</button>
+              
+          </div>
+
+          <div class="col-8">
+            <div class="figureCon" id="earthforecast">
+                <figure class="figure animated flipInX" id="figureCity">
+                </figure>
+            </div>
+
+          </div>
+      </div>
+        <div class="row">
+            <ul class="ulCon col-12" id="ul-5days">
+       
+                <li id="day-1">
+                  <h5 class="displayDate"></h5>
+                  <img id="iconDaily">
+                  <p id="tempDaily"></p>
+                  <p id="humid-5days"></p>
+                </li>
+                <li id="day-2">
+                  <h5 class="displayDate"></h5>
+                  <img id="iconDaily">
+                  <p id="tempDaily"></p>
+                  <p id="humid-5days"></p>
+                </li>
+                <li id="day-3">
+                  <h5 class="displayDate"></h5>
+                  <img id="iconDaily">
+                  <p id="tempDaily"></p>
+                  <p id="humid-5days"></p>
+                </li>
+                <li id="day-4">
+                  <h5 class="displayDate"></h5>
+                  <img id="iconDaily">
+                  <p id="tempDaily"></p>
+                  <p id="humid-5days"></p>
+                </li>
+                <li id="day-5">
+                  <h5 class="displayDate"></h5>
+                  <img id="iconDaily">
+                  <p id="tempDaily"></p>
+                  <p id="humid-5days"></p>
+                </li>
+        </div>
+
+  </div>
+
+  <footer class="py-4 bg-dark text-white-50">
+    <div class="text-center">
+      <h6>
+        &copy; Copyright by Juhee Kim
+      </h6>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://use.fontawesome.com/84f732b584.js"></script>
+  <script src="weather.js"></script>
+
+</body>
+
+</html>
