@@ -5,7 +5,7 @@ When user searches with city name at the lefe side bar, the current weather info
 Please visit [Weather-Dashboard](https://juhee-k.github.io/weather-dashboard/) site!
 
 ## Screenshots
-![weather-dashboard](image.png)
+![weather-dashboard](image001.png)
 
 ## Built with
 - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
