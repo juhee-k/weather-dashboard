@@ -44,27 +44,29 @@ $(document).ready(function() {
         var currCard = $("<div>").attr("class", "card bg-light");
         $("#earthforecast").append(currCard);
 
-        //add location to card header
-        var currCardHead = $("<div>").attr("class", "card-header").text("Current weather for " + response.name);
+        //add location to card header(city name)
+        var currCardHead = $("<h2>").attr("class", "card-header").text(`City: ${response.name}, ${response.sys.country}`);
         currCard.append(currCardHead);
 
-        var cardRow = $("<div>").attr("class", "row no-gutters");
+        var cardRow = $("<div>").attr("class", "row");
         currCard.append(cardRow);
 
         //get icon for weather conditions
-        var iconURL = "https://openweathermap.org/img/w/" + response.weather[0].icon + ".png";
+        var iconURL = "https://openweathermap.org/img/wn/" + response.weather[0].icon + ".png";
 
-        var imgDiv = $("<div>").attr("class", "col-md-4").append($("<img>").attr("src", iconURL).attr("class", "card-img"));
+        var imgDiv = $("<div>").attr("class", "col-md-4").append($("<img>").attr("src", iconURL));
         cardRow.append(imgDiv);
+
+        
 
         var textDiv = $("<div>").attr("class", "col-md-8");
         var cardBody = $("<div>").attr("class", "card-body");
         textDiv.append(cardBody);
-        //display city name
-        cardBody.append($("<h3>").attr("class", "card-title").text(response.name));
+
         //display last updated
-        var currdate = moment(response.dt, "X").format("dddd, MMMM Do YYYY, h:mm a");
-        cardBody.append($("<p>").attr("class", "card-text").append($("<small>").attr("class", "text-muted").text("Last updated: " + currdate)));
+
+        var date = $('<h4>').addClass('date').text(`Date: ${time}`);
+        cardBody.append($("<p>").attr("class", "card-text").append($("<small>").attr("class", "text-muted").text("Last updated: " + date)));
         //display Temperature
         cardBody.append($("<p>").attr("class", "card-text").html("Temperature: " + response.main.temp + " &#8457;"));
         //display Humidity
@@ -77,7 +79,7 @@ $(document).ready(function() {
         var city = $('<h1>')
           .addClass('cityName')
           .text(`City: ${response.name}, ${response.sys.country}`);
-        var date = $('<h3>')
+        var date = $('<h4>')
           .addClass('date')
           .text(`Date: ${time}`);
         var iconImage = $('<img>')
