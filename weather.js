@@ -7,9 +7,6 @@ $(document).ready(function() {
     var userInput;
     var time = moment().format('LL');
     var myKey = 'eaa53132e05fe884fae8af92307828e5';
-  
-    $('.figure').css('display', 'none');
-    $('.ulCon').css('display', 'none');
 
     //Today's weather based on search list
     function weatherToday(event) {
@@ -24,8 +21,6 @@ $(document).ready(function() {
           .prev()
           .val();
       }
-      $('.figure').empty();
-      $('.ulCon').css('display', 'flex');
 
       //Today's weather from API
       var queryURL =
