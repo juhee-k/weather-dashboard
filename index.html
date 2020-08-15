@@ -17,9 +17,9 @@
         <h1 class="style1">Weather Dashboard</h1>
     </header>
 
-  <div class="jumbotron col-12 style1">
+  <div class="jumbotron style1">
       <div class="row">
-          <div class="col-4">
+          <div class="col-3">
             
             <h5 class="mt-1">Search for City</h5>
             <div class="form-inline form-group">
@@ -28,54 +28,65 @@
                     <i class="fa fa-search"></i>
                   </button>
             </div>
-          
+
                 <ul class="list-group list-group-flush" id="searchedList"></ul>
+                <br>
                 <button class="btn-clear"><i class="fa fa-eraser"></i> Clear</button>
               
           </div>
 
+          <div class="col-1"></div>
+
           <div class="col-8">
-            <div class="figureCon" id="earthforecast">
-                <figure class="figure animated flipInX" id="figureCity">
+            <div class="row card bg-light">
+
+              <div>
+                <figure class="figure" id="figureCity">
                 </figure>
+              </div>
+
             </div>
+
+            <div class="row card bg-light">
+              <ul>
+         
+                  <li id="day-1">
+                    <h5 class="displayDate"></h5>
+                    <img id="iconDaily">
+                    <p id="tempDaily"></p>
+                    <p id="humid-5days"></p>
+                  </li>
+                  <li id="day-2">
+                    <h5 class="displayDate"></h5>
+                    <img id="iconDaily">
+                    <p id="tempDaily"></p>
+                    <p id="humid-5days"></p>
+                  </li>
+                  <li id="day-3">
+                    <h5 class="displayDate"></h5>
+                    <img id="iconDaily">
+                    <p id="tempDaily"></p>
+                    <p id="humid-5days"></p>
+                  </li>
+                  <li id="day-4">
+                    <h5 class="displayDate"></h5>
+                    <img id="iconDaily">
+                    <p id="tempDaily"></p>
+                    <p id="humid-5days"></p>
+                  </li>
+                  <li id="day-5">
+                    <h5 class="displayDate"></h5>
+                    <img id="iconDaily">
+                    <p id="tempDaily"></p>
+                    <p id="humid-5days"></p>
+                  </li>
+          </div>
+        </div>
+            
 
           </div>
       </div>
-        <div class="row">
-            <ul class="ulCon col-12" id="ul-5days">
-       
-                <li id="day-1">
-                  <h5 class="displayDate"></h5>
-                  <img id="iconDaily">
-                  <p id="tempDaily"></p>
-                  <p id="humid-5days"></p>
-                </li>
-                <li id="day-2">
-                  <h5 class="displayDate"></h5>
-                  <img id="iconDaily">
-                  <p id="tempDaily"></p>
-                  <p id="humid-5days"></p>
-                </li>
-                <li id="day-3">
-                  <h5 class="displayDate"></h5>
-                  <img id="iconDaily">
-                  <p id="tempDaily"></p>
-                  <p id="humid-5days"></p>
-                </li>
-                <li id="day-4">
-                  <h5 class="displayDate"></h5>
-                  <img id="iconDaily">
-                  <p id="tempDaily"></p>
-                  <p id="humid-5days"></p>
-                </li>
-                <li id="day-5">
-                  <h5 class="displayDate"></h5>
-                  <img id="iconDaily">
-                  <p id="tempDaily"></p>
-                  <p id="humid-5days"></p>
-                </li>
-        </div>
+        
 
   </div>
 

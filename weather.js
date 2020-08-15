@@ -40,42 +40,6 @@ $(document).ready(function() {
       }).then(function(response) {
         $('.figure').css('display', 'block');
 
-        //create the card
-        var currCard = $("<div>").attr("class", "card bg-light");
-        $("#earthforecast").append(currCard);
-
-        //add location to card header(city name)
-        var currCardHead = $("<h2>").attr("class", "card-header").text(`City: ${response.name}, ${response.sys.country}`);
-        currCard.append(currCardHead);
-
-        var cardRow = $("<div>").attr("class", "row");
-        currCard.append(cardRow);
-
-        //get icon for weather conditions
-        var iconURL = "https://openweathermap.org/img/wn/" + response.weather[0].icon + ".png";
-
-        var imgDiv = $("<div>").attr("class", "col-md-4").append($("<img>").attr("src", iconURL));
-        cardRow.append(imgDiv);
-
-        
-
-        var textDiv = $("<div>").attr("class", "col-md-8");
-        var cardBody = $("<div>").attr("class", "card-body");
-        textDiv.append(cardBody);
-
-        //display last updated
-
-        var date = $('<h4>').addClass('date').text(`Date: ${time}`);
-        cardBody.append($("<p>").attr("class", "card-text").append($("<small>").attr("class", "text-muted").text("Last updated: " + date)));
-        //display Temperature
-        cardBody.append($("<p>").attr("class", "card-text").html("Temperature: " + response.main.temp + " &#8457;"));
-        //display Humidity
-        cardBody.append($("<p>").attr("class", "card-text").text("Humidity: " + response.main.humidity + "%"));
-        //display Wind Speed
-        cardBody.append($("<p>").attr("class", "card-text").text("Wind Speed: " + response.wind.speed + " MPH"));
-
-  
-
         var city = $('<h1>')
           .addClass('cityName')
           .text(`City: ${response.name}, ${response.sys.country}`);
@@ -90,21 +54,20 @@ $(document).ready(function() {
               response.weather[0].icon +
               '.png'
           );
-  
+        
+        //display Temperature
         var tempF = parseInt((response.main.temp - 273.15) * 1.8 + 32);
-        var temperature = $('<h4>')
-          .addClass('current-temp')
-          .text(`Current Temperature: ${tempF} F°`);
-        var humidity = $('<h4>')
-          .addClass('humidity')
-          .text(`Humidity: ${response.main.humidity}%`);
-        var windSpeed = $('<h4>')
-          .addClass('wind-speed')
-          .text(`Wind Speed ${response.wind.speed} mph`);
-  
+        var temperature = $('<h4>').text(`Current Temperature: ${tempF} F°`);
+        
+        //display Humidity
+        var humidity = $('<h4>').text(`Humidity: ${response.main.humidity}%`);
+        
+        //display Wind Speed
+        var windSpeed = $('<h4>').text(`Wind Speed: ${response.wind.speed} mph`);
+
+        //get UV Index 
         var uvIdx = $('<h4>').addClass('uvIdx');
-  
-        /** */
+
         var latitude = response.coord.lat;
         var lon = response.coord.lon;
         function getUVidx() {
@@ -119,7 +82,6 @@ $(document).ready(function() {
             url: uvIdxUrl,
             method: 'GET'
           }).then(function(response) {
-            // console.log(response.value);
             $('.uvIdx').text(' UV Index: ' + response.value);
           });
         }
@@ -137,6 +99,7 @@ $(document).ready(function() {
       });
     }
   
+     //get 5 day forecast
     function forecastFiveDays() {
       if ($(this).attr('id') === 'searchedList') {
         var x = event.target;
@@ -154,7 +117,7 @@ $(document).ready(function() {
         '&APPID=' +
         myKey;
   
-      // API Call
+      // API Call for 5days forecast
       $.ajax({
         url: fiveDayCall,
         method: 'GET'
